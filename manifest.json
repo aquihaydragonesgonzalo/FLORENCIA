@@ -1,0 +1,26 @@
+
+{
+  "name": "Guía Florencia MSC 2026",
+  "short_name": "Florencia 2026",
+  "description": "Itinerario y guía personal para la escala en Florencia desde Livorno",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#1e3a8a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvVYlm-4zLxbxXytfjaMND4HGRSzqyWMEewJl-tKAd8Qs28rFd411YMWOfAV2YJu-IqqOB3KaBEw_0rFxpoFHCLiAHn7ZtqoxNYG1bZVZ4U7Q4cuIV9V-XU8JiyyT6aigIB0UJLpeWu4fXhfcQ_6nbrXd84YPRd7dZ8q1STw-rLcfTdkCTa5oAoPuTPZ8/s320/Gemini_Generated_Image_l4457il4457il445.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvVYlm-4zLxbxXytfjaMND4HGRSzqyWMEewJl-tKAd8Qs28rFd411YMWOfAV2YJu-IqqOB3KaBEw_0rFxpoFHCLiAHn7ZtqoxNYG1bZVZ4U7Q4cuIV9V-XU8JiyyT6aigIB0UJLpeWu4fXhfcQ_6nbrXd84YPRd7dZ8q1STw-rLcfTdkCTa5oAoPuTPZ8/s320/Gemini_Generated_Image_l4457il4457il445.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

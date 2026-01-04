@@ -1,0 +1,7 @@
+{
+  "name": "VISIT FLORENCIA 2026",
+  "description": "Tu asistente personal para la escala en Florencia el 15 de Abril de 2026. Itinerario detallado, mapa con track real y control de gastos.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
