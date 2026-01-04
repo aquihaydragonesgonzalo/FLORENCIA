@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Activity } from '../types';
-import { CheckCircle2, Circle, MapPin, AlertTriangle, Clock, ArrowRight, ExternalLink, Navigation, AlertCircle, Headphones } from 'lucide-react';
+import { CheckCircle2, Circle, MapPin, AlertTriangle, Clock, ArrowRight, ExternalLink, Navigation, AlertCircle, Headphones, Ticket } from 'lucide-react';
 import { calculateDuration, calculateTimeProgress, formatMinutes } from '../services/utils';
 
 interface TimelineProps {
@@ -124,6 +124,13 @@ const Timeline: React.FC<TimelineProps> = ({ itinerary, onToggleComplete, onLoca
                         "{act.keyDetails}"
                         </div>
 
+                        {act.contingencyNote && (
+                            <div className="mt-3 mb-4 flex items-start p-3 bg-red-50 text-red-800 rounded-xl text-xs font-medium border border-red-100">
+                                <AlertCircle size={14} className="mr-2 mt-0.5 flex-shrink-0" />
+                                <span>{act.contingencyNote}</span>
+                            </div>
+                        )}
+
                         <div className="flex flex-wrap items-center gap-2 mt-3 pt-4 border-t border-slate-50">
                             <button 
                                 onClick={() => onLocate(act.coords, act.endCoords)}
@@ -136,6 +143,12 @@ const Timeline: React.FC<TimelineProps> = ({ itinerary, onToggleComplete, onLoca
                             {act.googleMapsUrl && (
                                 <a href={act.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="flex items-center text-[10px] font-bold text-emerald-700 bg-emerald-50 px-3 py-2 rounded-xl border border-emerald-100 hover:bg-emerald-100 shadow-sm transition-colors">
                                     <ExternalLink size={12} className="mr-1.5" /> GOOGLE MAPS
+                                </a>
+                            )}
+
+                            {act.ticketUrl && (
+                                <a href={act.ticketUrl} target="_blank" rel="noopener noreferrer" className="flex items-center text-[10px] font-bold text-purple-700 bg-purple-50 px-3 py-2 rounded-xl border border-purple-100 hover:bg-purple-100 shadow-sm transition-colors">
+                                    <Ticket size={12} className="mr-1.5" /> TICKET
                                 </a>
                             )}
                             

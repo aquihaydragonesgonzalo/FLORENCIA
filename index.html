@@ -106,7 +106,7 @@
             Circle, MapPin, AlertTriangle, Clock, ExternalLink, AlertCircle,
             Volume2, Languages, PhoneCall, Thermometer, ArrowRight,
             Sun, Cloud, CloudRain, CloudLightning, Calendar, Footprints, Activity as ActivityIcon, Send,
-            Wind, CalendarDays, TrendingDown, Info
+            Wind, CalendarDays, TrendingDown, Info, Ticket
         } from 'lucide-react';
         import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 
@@ -279,7 +279,8 @@
         "priceEUR": 24,
         "type": "sightseeing",
         "completed": false,
-        "audioGuideText": "Uno de los museos más conocidos de Florencia, sobre todo porque en su interior se conserva el celebérrimo David de Miguel Ángel."
+        "audioGuideText": "Uno de los museos más conocidos de Florencia, sobre todo porque en su interior se conserva el celebérrimo David de Miguel Ángel.",
+        "ticketUrl": "https://www.galleriaaccademiafirenze.it/es/visit/"
         },
         {
         "id": "7",
@@ -603,6 +604,13 @@
                                 
                                 <div className="bg-blue-50/50 p-3 rounded-xl text-sm text-blue-950 italic border-l-4 border-amber-500 mb-4">"{act.keyDetails}"</div>
 
+                                {act.contingencyNote && (
+                                    <div className="mt-3 mb-4 flex items-start p-3 bg-red-50 text-red-800 rounded-xl text-xs font-medium border border-red-100">
+                                        <AlertCircle size={14} className="mr-2 mt-0.5 flex-shrink-0" />
+                                        <span>{act.contingencyNote}</span>
+                                    </div>
+                                )}
+
                                 <div className="flex flex-wrap items-center gap-2 mt-3 pt-4 border-t border-slate-50">
                                     <button onClick={() => onLocate(act.coords, act.endCoords)} className="flex items-center text-[10px] font-bold text-blue-800 bg-blue-50 px-3 py-2 rounded-xl border border-blue-100 hover:bg-blue-100 shadow-sm transition-colors">
                                         <Navigation size={12} className="mr-1.5" /> UBICACIÓN
@@ -611,6 +619,12 @@
                                     {act.googleMapsUrl && (
                                         <a href={act.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="flex items-center text-[10px] font-bold text-emerald-700 bg-emerald-50 px-3 py-2 rounded-xl border border-emerald-100 hover:bg-emerald-100 shadow-sm transition-colors">
                                             <ExternalLink size={12} className="mr-1.5" /> GOOGLE MAPS
+                                        </a>
+                                    )}
+
+                                    {act.ticketUrl && (
+                                        <a href={act.ticketUrl} target="_blank" rel="noopener noreferrer" className="flex items-center text-[10px] font-bold text-purple-700 bg-purple-50 px-3 py-2 rounded-xl border border-purple-100 hover:bg-purple-100 shadow-sm transition-colors">
+                                            <Ticket size={12} className="mr-1.5" /> TICKET
                                         </a>
                                     )}
                                     
@@ -631,7 +645,7 @@
                   );
                 })}
               </div>
-            </div>
+            </div >
           );
         };
 

@@ -1,3 +1,4 @@
+
 export interface Coordinates {
   lat: number;
   lng: number;
@@ -22,6 +23,7 @@ export interface Activity {
   googleMapsUrl?: string; // Nuevo campo para enlaces directos a Google Maps
   contingencyNote?: string; // Aviso de contingencia/emergencia
   audioGuideText?: string; // Texto para la audioguía
+  ticketUrl?: string; // Enlace a compra de tickets
 }
 
 export interface Pronunciation {

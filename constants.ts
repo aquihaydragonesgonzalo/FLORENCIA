@@ -168,7 +168,8 @@ export const INITIAL_ITINERARY: Activity[] = [
  "priceEUR": 24,
  "type": "sightseeing",
  "completed": false,
- "audioGuideText": "Uno de los museos más conocidos de Florencia, sobre todo porque en su interior se conserva el celebérrimo David de Miguel Ángel."
+ "audioGuideText": "Uno de los museos más conocidos de Florencia, sobre todo porque en su interior se conserva el celebérrimo David de Miguel Ángel.",
+ "ticketUrl": "https://www.galleriaaccademiafirenze.it/es/visit/"
  },
  {
  "id": "7",
