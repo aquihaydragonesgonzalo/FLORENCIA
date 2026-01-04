@@ -1,5 +1,4 @@
 
-
 import { Activity, Pronunciation, Coordinates } from './types';
 
 export const SHIP_DEPARTURE_TIME = "20:00";
@@ -65,6 +64,20 @@ export const FLORENCE_TRACK: [number, number][] = [
 ];
 
 export const INITIAL_ITINERARY: Activity[] = [
+ {
+ "id": "0",
+ "title": "Llegada a Puerto Livorno",
+ "startTime": "07:00",
+ "endTime": "07:00",
+ "locationName": "Puerto de Livorno",
+ "coords": { "lat": 43.552781, "lng": 10.301390 },
+ "description": "Llegada del crucero al puerto.",
+ "keyDetails": "Hora oficial de atraque.",
+ "priceEUR": 0,
+ "type": "logistics",
+ "completed": false,
+ "notes": "CRITICAL"
+ },
  {
  "id": "1",
  "title": "Desembarco y llegada al Shuttle",
