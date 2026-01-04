@@ -122,7 +122,7 @@ export const INITIAL_ITINERARY: Activity[] = [
  "priceEUR": 1.5,
  "type": "transport",
  "completed": false,
- "googleMapsUrl": "https://maps.app.goo.gl/8MQxJ5Ftbaz6sSWd9",
+ "googleMapsUrl": "https://maps.app.goo.gl/8MQxJ5Ftbqz6sSWd9",
  "contingencyNote": "Si el bus tarda, valorar taxi."
  },
  {
@@ -139,7 +139,7 @@ export const INITIAL_ITINERARY: Activity[] = [
  "priceEUR": 12,
  "type": "transport",
  "completed": false,
- "googleMapsUrl": "https://maps.app.goo.gl/w1LYWJrugoicFRzZ8"
+ "googleMapsUrl": "https://maps.app.goo.gl/w1LYWJru9oicFRzZ8"
  },
  {
  "id": "5",
@@ -297,7 +297,7 @@ export const INITIAL_ITINERARY: Activity[] = [
  "type": "transport",
  "completed": false,
  "contingencyNote": "El próximo tren no sale hasta dentro de una hora.",
- "googleMapsUrl": "https://maps.app.goo.gl/xTqRT8a7fCtDDU6AA"
+ "googleMapsUrl": "https://maps.app.goo.gl/w1LYWJru9oicFRzZ8"
  },
  {
  "id": "16",
@@ -313,7 +313,7 @@ export const INITIAL_ITINERARY: Activity[] = [
  "priceEUR": 1.5,
  "type": "transport",
  "completed": false,
- "googleMapsUrl": "https://maps.app.goo.gl/w7pZnGYRejacxzUP7"
+ "googleMapsUrl": "https://maps.app.goo.gl/w7pZnGYRejgcxzUP7"
  },
  {
  "id": "17",

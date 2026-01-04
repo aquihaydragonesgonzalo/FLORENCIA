@@ -133,6 +133,12 @@ const Timeline: React.FC<TimelineProps> = ({ itinerary, onToggleComplete, onLoca
                                 UBICACIÓN
                             </button>
                             
+                            {act.googleMapsUrl && (
+                                <a href={act.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="flex items-center text-[10px] font-bold text-emerald-700 bg-emerald-50 px-3 py-2 rounded-xl border border-emerald-100 hover:bg-emerald-100 shadow-sm transition-colors">
+                                    <ExternalLink size={12} className="mr-1.5" /> GOOGLE MAPS
+                                </a>
+                            )}
+                            
                             {act.audioGuideText && (
                               <button onClick={() => onOpenAudioGuide(act)} className="flex items-center text-[10px] font-bold text-amber-700 bg-amber-50 px-3 py-2 rounded-xl border border-amber-100 shadow-sm active:bg-amber-100"><Headphones size={12} className="mr-1.5" /> AUDIOGUÍA</button>
                             )}
