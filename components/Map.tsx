@@ -21,7 +21,6 @@ const MapComponent: React.FC<MapProps> = ({ activities, userLocation, focusedLoc
 
   useEffect(() => {
     if (!mapContainerRef.current || mapInstanceRef.current) return;
-    // Centro inicial ajustado a Florencia (aprox Piazza del Duomo)
     const map = L.map(mapContainerRef.current, { zoomControl: false }).setView([43.7731, 11.2553], 14);
     L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
       maxZoom: 18,
@@ -47,12 +46,21 @@ const MapComponent: React.FC<MapProps> = ({ activities, userLocation, focusedLoc
 
     activities.forEach(act => {
       const marker = L.marker([act.coords.lat, act.coords.lng], { icon: defaultIcon }).addTo(map);
-      marker.bindPopup(`
-        <div style="padding: 10px; font-family: 'Roboto Condensed', sans-serif;">
-          <h3 style="margin: 0; font-weight: bold; color: #1e3a8a;">${act.title}</h3>
-          <p style="margin: 4px 0 0 0; font-size: 11px; color: #64748b;">${act.locationName}</p>
+      
+      const navUrl = act.googleMapsUrl || `https://www.google.com/maps/dir/?api=1&destination=${act.coords.lat},${act.coords.lng}`;
+      
+      const popupContent = `
+        <div style="padding: 5px; font-family: 'Roboto Condensed', sans-serif; max-width: 200px;">
+          <h3 style="margin: 0 0 5px 0; font-weight: bold; color: #1e3a8a; font-size: 14px;">${act.title}</h3>
+          <p style="margin: 0 0 8px 0; font-size: 11px; color: #475569; line-height: 1.3;">${act.description}</p>
+          <a href="${navUrl}" target="_blank" rel="noopener noreferrer" 
+             style="display: block; width: 100%; text-align: center; background-color: #1e3a8a; color: white; padding: 6px 0; border-radius: 8px; font-weight: bold; font-size: 10px; text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px;">
+             IR AHORA
+          </a>
         </div>
-      `);
+      `;
+      
+      marker.bindPopup(popupContent);
       layersRef.current.push(marker);
     });
 
